@@ -1,0 +1,106 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins";
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* fait en sorte que les elements passent en colone quand il n'y a plus de place */
+    min-height: 100vh;
+    background: rgba(68, 117, 136, 0.548);
+    gap: 20px;
+    
+}
+
+.card{
+    background: white;
+    width: 300px;
+    border-radius:10px;
+    overflow: hidden;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    transition: 0.5s;
+    
+    
+    
+}
+
+.card:hover{
+    transform: translateY(-10px); /* mouvement vertical  "axe y" */
+}
+
+.card_header{
+    
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card_header img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* recouvre l'enssemble du parent */
+    filter: grayscale(1);
+    transition: 1.2s;
+    
+    
+    
+    /* border-radius: 10px  10px 0 0; */
+}
+
+.card_header img:hover{
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+.card_text{
+    padding: 30px;
+}
+
+.card_text h1{
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.card_text p {
+    
+    font-size: 14px;
+    color: rgb(147, 147, 147);
+    font-weight: 300;
+    
+}
+
+.coeur{
+    height: 50px;
+    width: 50px;
+    background: red;
+    position: absolute;
+    top: 0;
+    left: -50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    color: white;
+
+}
+
+.coeur a {
+    color: white;
+}
+.card_header:hover .coeur{
+    left: 0;
+}
+
+
+
+
